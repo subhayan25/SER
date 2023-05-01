@@ -264,7 +264,7 @@ def main():
                                "angry": a,
                                "sad": sd,
                                "disgust": d}
-                st.success(COLOR_DICT)
+               
 
         if audio_file is not None:
             st.markdown("## Analyzing...")
