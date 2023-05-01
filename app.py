@@ -416,14 +416,7 @@ def main():
         fig = px.violin(df, y="source", x="emotion4", color="actors", box=True, points="all", hover_data=df.columns)
         st.plotly_chart(fig, use_container_width=True)
 
-        st.subheader("FYI")
-        st.write("Since we are currently using a free tier instance of AWS, "
-                 "we disabled mel-spec and ensemble models.\n\n"
-                 "If you want to try them we recommend to clone our GitHub repo")
-        st.code("git clone https://github.com/CyberMaryVer/speech-emotion-webapp.git", language='bash')
-
-        st.write("After that, just uncomment the relevant sections in the app.py file "
-                 "to use these models:")
+        
 
     
 if __name__ == '__main__':
