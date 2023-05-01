@@ -235,36 +235,36 @@ def main():
         else:
             st.sidebar.warning("This model is temporarily disabled")
 
-        # with st.sidebar.expander("Change colors"):
-        #     st.sidebar.write("Use this options after you got the plots")
-        #     col1, col2, col3, col4, col5, col6, col7 = st.columns(7)
-        #
-        #     with col1:
-        #         a = st.color_picker("Angry", value="#FF0000")
-        #     with col2:
-        #         f = st.color_picker("Fear", value="#800080")
-        #     with col3:
-        #         d = st.color_picker("Disgust", value="#A52A2A")
-        #     with col4:
-        #         sd = st.color_picker("Sad", value="#ADD8E6")
-        #     with col5:
-        #         n = st.color_picker("Neutral", value="#808080")
-        #     with col6:
-        #         sp = st.color_picker("Surprise", value="#FFA500")
-        #     with col7:
-        #         h = st.color_picker("Happy", value="#008000")
-        #     if st.button("Update colors"):
-        #         global COLOR_DICT
-        #         COLOR_DICT = {"neutral": n,
-        #                       "positive": h,
-        #                       "happy": h,
-        #                       "surprise": sp,
-        #                       "fear": f,
-        #                       "negative": a,
-        #                       "angry": a,
-        #                       "sad": sd,
-        #                       "disgust": d}
-        #         st.success(COLOR_DICT)
+        with st.sidebar.expander("Change colors"):
+            st.sidebar.write("Use this options after you got the plots")
+            col1, col2, col3, col4, col5, col6, col7 = st.columns(7)
+        
+            with col1:
+                a = st.color_picker("Angry", value="#FF0000")
+            with col2:
+                f = st.color_picker("Fear", value="#800080")
+            with col3:
+                d = st.color_picker("Disgust", value="#A52A2A")
+            with col4:
+                sd = st.color_picker("Sad", value="#ADD8E6")
+            with col5:
+                n = st.color_picker("Neutral", value="#808080")
+            with col6:
+                sp = st.color_picker("Surprise", value="#FFA500")
+            with col7:
+                h = st.color_picker("Happy", value="#008000")
+            if st.button("Update colors"):
+                global COLOR_DICT
+                COLOR_DICT = {"neutral": n,
+                              "positive": h,
+                              "happy": h,
+                              "surprise": sp,
+                              "fear": f,
+                               "negative": a,
+                               "angry": a,
+                               "sad": sd,
+                               "disgust": d}
+                 st.success(COLOR_DICT)
 
         if audio_file is not None:
             st.markdown("## Analyzing...")
