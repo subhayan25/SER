@@ -264,7 +264,7 @@ def main():
                                "angry": a,
                                "sad": sd,
                                "disgust": d}
-                 st.success(COLOR_DICT)
+                st.success(COLOR_DICT)
 
         if audio_file is not None:
             st.markdown("## Analyzing...")
@@ -325,8 +325,8 @@ def main():
                             COLORS = color_dict(COLOR_DICT)
                             plot_colored_polar(fig2, predictions=pred, categories=CAT6,
                                                title=txt, colors=COLORS)
-                            # plot_polar(fig2, predictions=pred, categories=CAT6,
-                            #            title=txt, colors=COLORS)
+                            plot_polar(fig2, predictions=pred, categories=CAT6,
+                                        title=txt, colors=COLORS)
                             st.write(fig2)
                     with col3:
                         if em7:
@@ -339,8 +339,8 @@ def main():
                             COLORS = color_dict(COLOR_DICT)
                             plot_colored_polar(fig3, predictions=pred_, categories=CAT7,
                                                title=txt, colors=COLORS)
-                            # plot_polar(fig3, predictions=pred_, categories=CAT7,
-                            #            title=txt, colors=COLORS)
+                            plot_polar(fig3, predictions=pred_, categories=CAT7,
+                                       title=txt, colors=COLORS)
                             st.write(fig3)
                     with col4:
                         if gender:
